@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
-'''Task 1 Async.
-'''
+
+""" Task 1 Comprehension Operation """
+
+from asyncio import sleep
+from random import uniform
 from typing import List
-from importlib import import_module as using
 
-
-async_generator = using('0-async_generator').async_generator
+async_generator = __import__('0-async_generator').async_generator
 
 
 async def async_comprehension() -> List[float]:
-    '''this function creates a list of 10 numbers using generators.
-    '''
-    result = [n async for n in async_generator()]
+    """ Async Comprehension With generator """
+    result = [x async for x in async_generator()]
     return result
-
